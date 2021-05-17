@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+    }
+    img{
+        position: fixed;
+    }
+    </style>
+    <script>
+        function slike(){
+            var image = document.getElementById('myImage');
+            if (image.src.match ("Zoe_P")){
+            image.src = "ZoeE.png";}
+           
+            else if(image.src.match("ZoeE")) {
+            image.src = "ZoeQ.png";
+            }
+            else{
+                image.src = "Zoe_P.png";
+            }
+        }   
+
+    </script>
+</head>
+<body>
+    <div>
+    <img src="Zoe_P.png" alt="" onclick="slike()" id="myImage"> 
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae asperiores ratione obcaecati ipsa exercitationem facere minus vel consectetur amet dolorum est quis tempora pariatur quasi laboriosam ipsum, nostrum quidem officia.
+</p>
+    </div>
+</body>
+</html>

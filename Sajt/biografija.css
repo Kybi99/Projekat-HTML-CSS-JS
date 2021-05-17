@@ -1,0 +1,146 @@
+
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    text-align: center;
+    background-color: rgba(83, 83, 83, 0.164);
+    border-radius: 0px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin: 0 0;
+}
+
+.nav{
+    display: inline-block;
+    padding: 5px 0px 5px; 
+    background-color: rgba(0, 0, 0, 0.534);
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+    margin:10px 50px;
+    padding: 5px;
+
+}
+
+.nav:hover{
+    background-color: rgb(98, 97, 97);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(250, 119, 59);
+    
+}
+span{
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+}
+
+h2{
+    color: rgb(255, 207, 47);
+}
+#outside{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+body{
+    font-size: larger;
+    background-image: url(biography.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+}
+#inside{
+    background-color: rgba(17, 16, 16, 0.808);
+    width: 33%;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0px;
+    padding:10px 0px;
+}
+#left{
+    position: relative;
+    width: 33%;
+    height: 500px;
+    display: inline-block;
+}
+#right{
+    position: relative;
+    width: 33%;
+    height: 500px;
+    display: inline-block;
+}
+
+body{
+    margin:0;
+}
+h1{
+    margin: 0px 0;
+}
+h2{
+    margin: 20px 0;
+}
+@media only screen and (max-width:768px)
+{
+    #inside{
+        width: 100%;
+    }
+    #left{
+        display: none;
+    }
+    #right{
+        display: none;
+    }
+
+    .nav{
+        width: 300px;
+        display: inline-block;
+        margin: 10px 20px;
+        padding: 5px;
+      
+    }
+    ul{
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        
+    }
+}
+@media only screen and (max-width:1281px)
+{
+    #inside{
+        width: 100%;
+    }
+    #left{
+        display: none;
+    }
+    #right{
+        display: none;
+    }
+    .nav{
+        width: 300px;
+        display: inline-block;
+        margin: 10px 20px;
+        padding: 5px;
+      
+    }
+    ul{
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        
+    }
+}
+@media only screen and (max-width:360px)
+{       
+     #inside{
+         width: 100%;
+         overflow: visible;
+    }
+}

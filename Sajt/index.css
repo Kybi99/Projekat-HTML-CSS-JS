@@ -1,0 +1,262 @@
+body{
+    background-color: rgb(228, 192, 116);
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    text-align: center;
+}
+.nav{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0px 5px; 
+    background-color: rgb(11, 104, 16);
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    left: -110%;
+    transition: left 0.5s;
+}
+#check{
+    display: none;
+}
+label{
+    float: right;
+}
+#check:checked ~ nav li{
+    left:0%;
+}
+.nav:hover{
+    background-color: rgb(158, 100, 100);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(149, 230, 255);
+    
+}
+h1{
+    color: rgb(50, 153, 223);
+    text-align: center;
+    padding: 0px 5px 0px;
+    margin: 0;
+    font-family:'Georgia';
+    font-style: italic;
+    
+    
+    
+}
+img{
+    width: 100%;
+    margin-bottom:10px;
+    padding: 0;
+}
+
+#logo{
+    width: 90px;
+    height:90px;
+    float: left;
+}
+p{
+    color: rgb(13, 12, 14);
+    margin-bottom: 0;
+}
+input:focus{
+    outline: 2px solid rgb(245, 95, 9);
+}
+input::placeholder{
+    text-align: center;
+}
+form{
+    background-color: cornflowerblue;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+
+pre{
+    line-height: 10px;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+#submit:hover{
+    border: 2px solid orange;
+}
+#prvi-par{
+    color: red;
+}
+#drugi-par{color: blue;}
+
+#treci-par{color: yellow;}
+/*header{
+    width: 70%;
+    height: 200px;
+    background-image: url(banner-clip-art-baner.jpg);
+    
+}*/
+/*DESKTOP*/
+@media only screen and (min-width:1501px){
+    #logo{
+        width: 200px;
+        height: 200px;
+        float: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        margin-left:200px;
+        
+    }
+    label{
+        display: none;
+    }
+    .nav{
+        width: 300px;
+        display: inline-block;
+        margin: 10px 50px;
+        padding: 5px;
+        left: 0;
+    }
+    ul{
+        background-color: rgb(235, 232, 107);
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 80px;
+        
+    }
+    h1{
+        margin: 30px;
+        margin-top: 70px;
+        color: rgb(6, 6, 201);
+        font-size: 50px;
+    }
+    *{margin: 0;}
+
+    form{
+        position: absolute;
+        top: 25px;
+        left: 1500px;
+        width: 300px;
+        height: 150px;
+        background-color: rgba(74, 133, 243, 0.555);
+        line-height: 20px;
+    }
+    input{
+        width: 250px;
+    }
+   
+    pre{
+        padding: 10px;
+    }
+    input{
+        text-align: center;
+        color: rgb(13, 181, 187);
+        background-color: rgba(0, 0, 0, 0.377);
+        border:1px solid rgba(216, 243, 96, 0.925);
+        margin: 2px;
+    }
+    input::placeholder{
+        color: white;
+    }
+    #submit{
+        width: 100px;
+        color: white;
+        background-color: rgba(23, 5, 41, 0.493);
+        border: 2px solid rgb(10, 78, 10);
+        cursor: pointer;
+    }
+    p a {
+        color: red;
+    }
+}
+/*TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1200px)
+{
+
+    #logo{
+        width: 200px;
+        height: 200px;
+        float: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        margin-left:20px;
+        margin-right: 30px;
+    }
+    label{
+        display: none;
+    }
+    .nav{
+        width: 300px;
+        display: inline-block;
+        margin: 10px 10px;
+        padding: 5px;
+        left: 0;
+    }
+    ul{
+        background-color: rgb(235, 232, 107);
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+    h1{
+        margin: 30px;
+        margin-top: 40px;
+        color: rgb(6, 6, 201);
+        font-size: 50px;
+        width: 500px;
+        margin-left: 300px;
+        position: none;
+        text-align: center;
+    }
+    *{margin: 0;}
+    
+
+}
+/*BIGGER TABLET*/
+@media (min-width: 1201px) and (max-width: 1500px)
+{
+
+    #logo{
+        width: 200px;
+        height: 200px;
+        float: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        margin-left:50px;
+        margin-right: 30px;
+    }
+    label{
+        display: none;
+    }
+    .nav{
+        width: 300px;
+        display: inline-block;
+        margin: 10px 10px;
+        padding: 5px;
+        left: 0;
+    }
+    ul{
+        background-color: rgb(243, 163, 109);
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+    h1{
+        margin: 30px;
+        margin-top: 40px;
+        color: rgb(6, 6, 201);
+        font-size: 50px;
+        width: 500px;
+        margin-left: 450px;
+        position: none;
+        text-align: center;
+    }
+    *{margin: 0;}
+
+
+}

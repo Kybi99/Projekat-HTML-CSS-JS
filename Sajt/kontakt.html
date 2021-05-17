@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="kontakt.css">
+    <title>Kontakt</title>
+    <script>
+        
+        function validacija(){
+            var firstname=document.forms["form"]["firstname"].value;
+            var lastname=document.forms["form"]["lastname"].value;
+            var email=document.forms["form"]["email"].value;
+            var password=document.forms["form"]["password"].value;
+            var confirm=document.forms["form"]["confirm"].value;
+            var error=document.getElementsByClassName("error");
+            var nameV=/[A-Z]{1}[a-z]{2,}/;
+            var emailV=/[a-zA-z1-9]{3,}@[a-zA-z]{3,}.{1}com/;
+            var passwordV=/^[A-Za-z0-9@$!%*?&]{8,16}$/
+            console.log(error);
+            if (firstname == null || firstname == "" || firstname.match(nameV) == null){
+                error[0].innerHTML="First Name must be filled";
+                return false;
+            }
+            else{
+                for(var i = 0 ;i < 5; i++){
+                    error[i].innerHTML="";
+                }
+            }
+            
+            if (lastname == null || lastname == "" || lastname.match(nameV) == null){
+                error[1].innerHTML="Last Name must be filled";
+                return false;
+            }
+            else{
+                for(var i = 0 ;i < 5; i++){
+                    error[i].innerHTML="";
+                }
+            }
+            if(email==null || email== "" || email.match(emailV)==null){
+                error[2].innerHTML="Email must be filled";
+                return false;
+            }
+            else{
+                for(var i = 0 ;i < 5; i++){
+                    error[i].innerHTML="";
+                }
+            }
+            if(password==null || password=="" || password.match(passwordV) == null)
+            {
+                error[3].innerHTML="Password must be filled";
+                return false;
+            }
+            else{
+                for(var i = 0 ;i < 5; i++){
+                    error[i].innerHTML="";
+                }
+            }
+            if(password!=confirm || confirm.match(passwordV) == null){
+                error[4].innerHTML="Two passwords must match";
+                return false;
+            }
+            else{
+                for(var i = 0 ;i < 5; i++){
+                    error[i].innerHTML="";
+                }
+            }
+        return true
+
+        }   
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <img id ="menuButton" src="menuButton.png" alt="menuButton">
+    </label>
+    <nav>
+        <ul>
+           <a href="index.html"> <li class="nav">Home page</li></a>
+           <a href="biografija.html"> <li class="nav">Biography</li></a>
+           <a href="galerija.html"> <li class="nav">Gallery</li></a>
+           <a href="kontakt.html"> <li class="nav" id="last">Contact</li></a>
+        </ul>
+   </nav><br>
+<div id="background">
+   <form action="demo_form.asp" method="post" onsubmit="return validacija()" name="form">
+    <pre>
+
+<div class="error" id="error1"></div><input type="text" name="firstname" placeholder="First Name">
+<div class="error" id="error2"></div><input type="text" name="lastname" placeholder="Last Name">
+<div class="error" id="error3"></div><input type="email" placeholder="E-mail" name="email">
+<div class="error" id="error4"></div><input type="password" placeholder="Password" name="password">
+<div class="error" id="error5"></div><input type="password" placeholder="Confirm password" name="confirm">
+
+<input type="submit" value="Sign up" name="submit" id="submit">
+    
+    </pre>
+    Forgot password? <a href="#" onclick="stupid()">Click here</a><br><br>
+
+   
+
+
+    </form><br><br>
+</div>
+</body>
+</html>

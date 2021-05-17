@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Projekat</title>
+    <script>
+        function validacija(){
+            var email=document.forms["form"]["email"].value;
+            var password=document.forms["form"]["password"].value;
+
+            if(email==null || email== ""){
+
+                return false;
+            }
+
+            if(password==null || password=="")
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        var add1=(
+            function(){
+            var brojac1=0;
+            return function(){
+                return brojac1+=1;
+            }
+        })();
+        
+        var add2=(
+            function(){
+            var brojac2=0;
+            return function(){
+                return brojac2+=1;
+            }
+        })();
+
+        var add3=(
+            function(){
+            var brojac3=0;
+            return function(){
+                return brojac3+=1;
+            }
+        })();
+
+        function linkovi(obj){
+
+            var prvi=document.getElementById("prvi-link");
+            var drugi=document.getElementById("drugi-link");
+            var treci=document.getElementById("treci-link");
+            var prvi_par=document.getElementById("prvi-par");
+            var drugi_par=document.getElementById("drugi-par");
+            var treci_par=document.getElementById("treci-par");
+            var par=document.getElementsByClassName("par");
+            var linije=document.getElementsByClassName("linija");
+            var linkovi=document.getElementsByClassName("linkovi")
+
+            var temp="";
+            var temp2="";
+            if(obj.id.match("prvi-link")){  
+                prvi_par.innerHTML=add1();
+            }
+            else if(obj.id.match("drugi-link")){  
+                drugi_par.innerHTML=add2();
+            }
+            else if(obj.id.match("treci-link")){  
+                treci_par.innerHTML=add3();
+            }
+            console.log(obj)
+            console.log(par[0].innerHTML);
+            console.log(par[1].innerHTML);
+            console.log(par[2].innerHTML);
+
+            for(var i=0;i<2;i++)
+            {
+                for(var j=i+1;j<3;j++){
+                    if(par[i].innerHTML<par[j].innerHTML){
+                        temp=par[i].innerHTML;
+                        par[i].innerHTML=par[j].innerHTML;
+                        par[j].innerHTML=temp;
+                        temp2=linkovi[i].href;
+                        linkovi[i].href=linkovi[j].href;
+                        linkovi[j].href=temp2;
+                    }
+                }
+            }
+            console.log(linkovi[0].href);
+            console.log(linkovi[1].href);
+            console.log(linkovi[2].href);
+     /*      linije[0].innerHTML=par[0].innerHTML;
+            linije[1].innerHTML=par[1].innerHTML;
+            linije[2].innerHTML=par[2].innerHTML;*/
+        
+
+           
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="zoesign.jpg" alt="logo" id="logo">
+        <h1>Rezime</h1>
+    </header>   
+    <input type="checkbox" id="check">
+    <label for="check"><div><pre>___
+___ 
+___
+
+
+</div> </pre>
+    </label>
+    <nav>
+         <ul>
+            <a href="index.html"> <li class="nav">Home page</li></a>
+            <a href="biografija.html"> <li class="nav">Biography</li></a>
+            <a href="galerija.html"> <li class="nav">Gallery</li></a>
+            <a href="kontakt.html"> <li class="nav">Contact</li></a>
+         </ul>
+    </nav>
+    <img src="background.png" alt="image" id="image"><br>
+
+    <br>
+    <form action="demo_form.asp" method="post" onsubmit="return validacija()" name="form">
+        <pre><br><input type="text" name="email" placeholder="E-mail">
+<input type="password" name="password" placeholder="Password">
+
+<input type="submit" value="Log in" name="submit" id="submit">
+        </pre>
+        Forgot password? <a href="#" onclick="stupid()">Click here</a><br>
+     &nbsp;  &nbsp; Don't have account? <a href="kontakt.html">Create one</a>
+    </form><br><br>
+        <!--
+        <form action="" method="post">
+                <input type="text" name="email" placeholder="E-mail"><br>
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Log in" name="submit" id="submit">
+            Forgot password? <a href="">Click here</a>
+            Don't have account? <a href="">Create one</a>
+        </form>
+        -->
+<footer>
+
+</footer>
+</body>
+</html>
